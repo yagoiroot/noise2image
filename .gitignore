@@ -1,6 +1,3 @@
-/models
-/np_transforms.py
-/requirements.txt
-/train.py
-/train_synthetic.py
-/utils.py
+*.ckpt
+*.h5
+.DS_Store
