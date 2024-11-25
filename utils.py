@@ -1,21 +1,12 @@
+"""Utility functions and dataset classes for event-based data processing and training."""
 import os
-import csv
 import numpy as np
 import torch
-import torch.nn as nn
-import torch.nn.functional as F
-import torchvision.transforms.functional as TF
 import PIL.Image as Image
 from tqdm import tqdm
 from torch.utils.data import Dataset
 import scipy.special
-from typing import Any, Optional, Tuple
-from collections import namedtuple
 import cv2
-import PIL
-import math
-from torchvision.datasets import VisionDataset
-from torchvision.datasets.utils import verify_str_arg
 import numba as nb
 from skimage import io
 from sklearn.linear_model import LinearRegression
@@ -356,7 +347,7 @@ def data_split(dataset, validation_split=0.1, testing_split=0.2, seed=42):
 
 
 def calibrate_distortion(calib_img):
-    gt_img = cv2.resize(cv2.imread('./EventCam/calibration.png'), (1280, 720))
+    gt_img = cv2.resize(cv2.imread('./calibration.png'), (1280, 720))
     gt_img = cv2.cvtColor(gt_img, cv2.COLOR_BGR2GRAY)
 
     checker_size = (37, 20)

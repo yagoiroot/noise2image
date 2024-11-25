@@ -1,4 +1,13 @@
-# Code for Noise2Image: Seeing from Noise with an Event Camera
+# Code for "Noise2Image: Noise-Enabled Static Scene Recovery for Event Cameras"
+
+<p align="center">
+<img src="thumbnail.jpg" alt="drawing" width="300"/>
+</p>
+
+<p align="center">
+    <a style="text-decoration:none !important;" href="https://arxiv.org/abs/2404.01298" alt="arXiv"> <img src="https://img.shields.io/badge/arXiv-pdf-b31b1b.svg?style=flat" /></a>
+    <a style="text-decoration:none !important;" href="https://berkeley.box.com/s/z9s21gs3tyrfpngzl9he66mr9s4kp1up" alt="DOI"><img src="https://img.shields.io/badge/Dataset-Box-fedcba.svg?style=flat" /></a>
+</p>
 
 ## Requirements
 - conda or miniconda
@@ -54,4 +63,12 @@
     ```
 
 ## Citation
-To be added.
+```
+@article{cao2024noise2image,
+  title={Noise2Image: Noise-Enabled Static Scene Recovery for Event Cameras},
+  author={Cao, Ruiming and Galor, Dekel and Kohli, Amit and Yates, Jacob L and Waller, Laura},
+  journal={arXiv preprint arXiv:2404.01298},
+  year={2024}
+}
+```
+Equal contribution: Ruiming Cao (rcao@berkeley.edu), Dekel Galor (galor@berkeley.edu)

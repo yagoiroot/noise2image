@@ -1,19 +1,20 @@
+"""Training noise2image model on experimental paired data of noise events and intensity images."""
 import os
+from argparse import ArgumentParser
 import numpy as np
-import utils
 import torch
 from torchvision import transforms
-from torch.utils.data import DataLoader, ConcatDataset
+from torch.utils.data import DataLoader
 import lightning as l
 from lightning.pytorch import loggers
 from lightning.pytorch import Trainer
 from lightning.pytorch.callbacks import ModelCheckpoint, LearningRateMonitor
 import torchmetrics
-from models.unet_attention import Unet
-import np_transforms
 
+from models.unet_attention import Unet
 from models.resunet import ResUnet
-from argparse import ArgumentParser
+import np_transforms
+import utils
 
 INDIST_EVENT_PATH = './data/indist_events/'
 INDIST_IMAGE_PATH = './data/indist_images/'
@@ -22,18 +23,26 @@ OOD_IMAGE_PATH = './data/ood_DIV2K_images/'
 
 parser = ArgumentParser()
 parser.add_argument("--gpu_ind", type=int, default=0, help="GPU index")
-parser.add_argument("--vanilla_unet", action='store_true', help="Use vanilla U-Net instead of the advanced u-net with attention layers")
+parser.add_argument("--vanilla_unet", action='store_true', 
+                    help="Use vanilla U-Net instead of the advanced u-net with attention layers")
 parser.add_argument("--num_epochs", type=int, default=100, help="Number of epochs")
 parser.add_argument("--lr", type=float, default=5e-5, help="Learning rate")
 parser.add_argument("--batch_size", type=int, default=3, help="Batch size")
 parser.add_argument("--num_workers", type=int, default=4, help="Number of workers for data loader")
-parser.add_argument("--log_name", type=str, default='', help="Name of the log & checkpoint folder under ./lightning_logs.")
-parser.add_argument("--checkpoint_path", type=str, default='', help="Path to the checkpoint to load from. Will skip training if provided.")
-parser.add_argument("--time_bin", type=int, default=1, help="Time binning during the event aggregation. Note that default value is 1, which means all events are aggregated into a single time bin.")
-parser.add_argument("--pixel_bin", type=int, default=2, help="Pixel binning during the event aggregation.")
-parser.add_argument("--polarity", action='store_true', help="Aggregate events into 2 channels for positive and negative polarities.")
-parser.add_argument("--time_std", action='store_true', help="Add a channel for standard deviation of the timestamp.")
-parser.add_argument("--integration_time_s", type=float, default=1, help="Event aggregation time in seconds.")
+parser.add_argument("--log_name", type=str, default='', 
+                    help="Name of the log & checkpoint folder under ./lightning_logs.")
+parser.add_argument("--checkpoint_path", type=str, default='', 
+                    help="Path to the checkpoint to load from. Will skip training if provided.")
+parser.add_argument("--time_bin", type=int, default=1, 
+                    help="Time binning during the event aggregation. Note that default value is 1, which means all events are aggregated into a single time bin.")
+parser.add_argument("--pixel_bin", type=int, default=2, 
+                    help="Pixel binning during the event aggregation.")
+parser.add_argument("--polarity", action='store_true', 
+                    help="Aggregate events into 2 channels for positive and negative polarities.")
+parser.add_argument("--time_std", action='store_true', 
+                    help="Add a channel for standard deviation of the timestamp.")
+parser.add_argument("--integration_time_s", type=float, default=1, 
+                    help="Event aggregation time in seconds.")
 
 torch.set_float32_matmul_precision('medium')
 
