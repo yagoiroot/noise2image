@@ -71,4 +71,4 @@
   year={2024}
 }
 ```
-Equal contribution: Ruiming Cao (rcao@berkeley.edu), Dekel Galor (galor@berkeley.edu)
+Equal contribution from Ruiming Cao (rcao@berkeley.edu) and Dekel Galor (galor@berkeley.edu)
