@@ -5,7 +5,8 @@
 </p>
 
 <p align="center">
-    <a style="text-decoration:none !important;" href="https://arxiv.org/abs/2404.01298" alt="arXiv"> <img src="https://img.shields.io/badge/arXiv-pdf-b31b1b.svg?style=flat" /></a>
+    <a style="text-decoration:none !important;" href="https://arxiv.org/abs/2404.01298" alt="arXiv"> <img src="https://img.shields.io/badge/arXiv-preprint-b31b1b.svg?style=flat" /></a>
+    <a style="text-decoration:none !important;" href="https://opg.optica.org/abstract.cfm?uri=optica-12-1-46" alt="arXiv"> <img src="https://img.shields.io/badge/paper-pdf-y31b1b.svg?style=flat" /></a>
     <a style="text-decoration:none !important;" href="https://berkeley.box.com/s/z9s21gs3tyrfpngzl9he66mr9s4kp1up" alt="DOI"><img src="https://img.shields.io/badge/Dataset-Box-fedcba.svg?style=flat" /></a>
 </p>
 
@@ -64,11 +65,15 @@
 
 ## Citation
 ```
-@article{cao2024noise2image,
-  title={Noise2Image: Noise-Enabled Static Scene Recovery for Event Cameras},
+@article{cao2025noise2image,
+  title={Noise2Image: noise-enabled static scene recovery for event cameras},
   author={Cao, Ruiming and Galor, Dekel and Kohli, Amit and Yates, Jacob L and Waller, Laura},
-  journal={arXiv preprint arXiv:2404.01298},
-  year={2024}
+  journal={Optica},
+  volume={12},
+  number={1},
+  pages={46--55},
+  year={2025},
+  publisher={Optica Publishing Group}
 }
 ```
 Equal contribution from Ruiming Cao (rcao@berkeley.edu) and Dekel Galor (galor@berkeley.edu)
