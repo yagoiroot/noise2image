@@ -8,6 +8,7 @@
     <a style="text-decoration:none !important;" href="https://arxiv.org/abs/2404.01298" alt="arXiv"> <img src="https://img.shields.io/badge/arXiv-preprint-b31b1b.svg?style=flat" /></a>
     <a style="text-decoration:none !important;" href="https://opg.optica.org/abstract.cfm?uri=optica-12-1-46" alt="arXiv"> <img src="https://img.shields.io/badge/paper-pdf-y31b1b.svg?style=flat" /></a>
     <a style="text-decoration:none !important;" href="https://berkeley.box.com/s/z9s21gs3tyrfpngzl9he66mr9s4kp1up" alt="DOI"><img src="https://img.shields.io/badge/Dataset-Box-fedcba.svg?style=flat" /></a>
+    <a style="text-decoration:none !important;" href="https://www.kaggle.com/datasets/ruimingc/noise2image-for-event-cameras" alt="DOI"><img src="https://img.shields.io/badge/Dataset-backup-badcba.svg?style=flat" /></a>
 </p>
 
 ## Requirements
@@ -29,7 +30,7 @@
     ```
 
 ## Noise-event-to-image dataset
-1. Download dataset from [Box drive](https://berkeley.box.com/s/z9s21gs3tyrfpngzl9he66mr9s4kp1up)
+1. Download dataset from [Box drive](https://berkeley.box.com/s/z9s21gs3tyrfpngzl9he66mr9s4kp1up) or [Kaggle](https://www.kaggle.com/datasets/ruimingc/noise2image-for-event-cameras)
 2. Unzip them into `data` folder
 
 ## Usage
